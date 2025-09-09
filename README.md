@@ -3,7 +3,9 @@
 **Full-Stack Web Application using MongoDB, Express.js, and Angular**
 
 **Student:** Vo Viet Tien Bui - s5325217
+
 **Course:** 3813ICT - Software Frameworks  
+
 **Trimester:** 2, 2025
 
 ---
