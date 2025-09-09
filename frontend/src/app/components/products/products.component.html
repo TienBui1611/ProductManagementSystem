@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="header">
+    <h1>Product Management</h1>
+    <div class="header-actions">
+      <button 
+        class="btn btn-secondary" 
+        (click)="loadProducts()"
+        [disabled]="loading"
+        title="Refresh product list">
+        <i class="icon">🔄</i> {{ loading ? 'Loading...' : 'Refresh' }}
+      </button>
+      <button class="btn btn-primary" [routerLink]="['/add-product']">
+        <i class="icon">+</i> Add New Product
+      </button>
+    </div>
+  </div>
+
+  <div class="loading" *ngIf="loading">
+    <p>Loading products...</p>
+  </div>
+
+  <div class="error" *ngIf="error">
+    <p>{{ error }}</p>
+    <button class="btn btn-secondary" (click)="loadProducts()">Retry</button>
+  </div>
+
+  <div class="products-grid" *ngIf="!loading && !error">
+    <div class="product-card" *ngFor="let product of products">
+      <div class="product-header">
+        <h3>{{ product.name }}</h3>
+        <span class="product-id">ID: {{ product.id }}</span>
+      </div>
+      
+      <div class="product-body">
+        <p class="description">{{ product.description }}</p>
+        <div class="product-details">
+          <span class="price">${{ product.price | number:'1.2-2' }}</span>
+          <span class="units">Stock: {{ product.units }}</span>
+        </div>
+      </div>
+      
+      <div class="product-actions">
+        <button 
+          class="btn btn-secondary" 
+          [routerLink]="['/update-product', product._id]">
+          Edit
+        </button>
+        <button 
+          class="btn btn-danger" 
+          (click)="deleteProduct(product._id!, product.name)"
+          [disabled]="deleting">
+          {{ deleting ? 'Deleting...' : 'Delete' }}
+        </button>
+      </div>
+    </div>
+
+    <div class="empty-state" *ngIf="products.length === 0">
+      <h2>No Products Found</h2>
+      <p>Start by adding your first product!</p>
+      <button class="btn btn-primary" [routerLink]="['/add-product']">
+        Add Product
+      </button>
+    </div>
+  </div>
+</div>
