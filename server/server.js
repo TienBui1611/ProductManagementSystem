@@ -162,15 +162,6 @@ app.put('/products/:id', async (req, res) => {
     }
 });
 
-// PATCH endpoint (same as PUT for this implementation)
-app.patch('/products/:id', async (req, res) => {
-    // Redirect to PUT handler
-    app._router.handle(
-        { ...req, method: 'PUT' },
-        res,
-        () => {}
-    );
-});
 
 // Root endpoint
 app.get('/', (req, res) => {
@@ -194,7 +185,6 @@ app.listen(PORT, () => {
     console.log('  POST   /products     - Add new product');
     console.log('  DELETE /products/:id - Delete product by ObjectID');
     console.log('  PUT    /products/:id - Update product by ObjectID');
-    console.log('  PATCH  /products/:id - Update product by ObjectID');
 });
 
 module.exports = app;
