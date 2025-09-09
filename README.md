@@ -122,7 +122,7 @@ Open your web browser and navigate to:
 
 ## 🧪 Testing the Application
 
-### Task 2 - Test Database Operations
+### Test Database Operations
 
 ```bash
 # Test each CRUD operation individually
@@ -132,21 +132,7 @@ node App/update.js   # Updates product ID 1
 node App/remove.js   # Removes product ID 4
 ```
 
-### Task 3 - Test API Endpoints
-
-With the Express server running (`node server.js`), test the API:
-
-```bash
-# Test GET - List all products
-curl http://localhost:3000/products
-
-# Test API root endpoint
-curl http://localhost:3000/
-```
-
-**Alternative:** Use a tool like **Postman** to test the API endpoints.
-
-### Task 4 - Test Frontend Features
+### Test Frontend Features
 
 With the Angular app running (`ng serve`), test these features:
 
