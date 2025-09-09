@@ -103,11 +103,4 @@ export class UpdateProductComponent implements OnInit {
     });
   }
 
-  resetForm(): void {
-    if (this.originalProduct) {
-      this.product = { ...this.originalProduct };
-    }
-    this.errorMessage = '';
-    this.successMessage = '';
-  }
 }

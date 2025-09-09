@@ -118,13 +118,6 @@
         [disabled]="productForm.invalid || submitting">
         {{ submitting ? 'Updating Product...' : 'Update Product' }}
       </button>
-      
-      <button
-        type="button"
-        class="btn btn-secondary"
-        (click)="resetForm()">
-        Reset Changes
-      </button>
     </div>
 
     <div class="error-message" *ngIf="errorMessage">
