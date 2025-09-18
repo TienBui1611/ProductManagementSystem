@@ -1,23 +1,22 @@
-# Workshop 9 - Product Management System
+# Product Management System
 
 **Full-Stack Web Application using MongoDB, Express.js, and Angular**
 
-**Student:** Vo Viet Tien Bui - s5325217
+[![MongoDB](https://img.shields.io/badge/MongoDB-4.4+-green.svg)](https://mongodb.com)
+[![Express.js](https://img.shields.io/badge/Express.js-4.18+-blue.svg)](https://expressjs.com)
+[![Angular](https://img.shields.io/badge/Angular-17+-red.svg)](https://angular.io)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org)
 
-**Course:** 3813ICT - Software Frameworks  
+A modern, responsive product management system built with the MEAN stack. Features a complete CRUD interface for managing products with a RESTful API backend and an intuitive Angular frontend.
 
-**Trimester:** 2, 2025
+## ✨ Features
 
----
-
-## 📋 Workshop Tasks Completed
-
-✅ **Task 1:** Setup - MongoDB driver installation  
-✅ **Task 2:** Server-side MongoDB CRUD operations  
-✅ **Task 3:** Express REST API with all required endpoints  
-✅ **Task 4:** Angular frontend with three pages  
-
----
+🛍️ **Product Management** - Add, view, edit, and delete products  
+🔄 **Real-time Updates** - Instant refresh and synchronization  
+📱 **Responsive Design** - Works on desktop, tablet, and mobile  
+🚀 **RESTful API** - Clean, documented API endpoints  
+✅ **Form Validation** - Client-side validation with error handling  
+🎯 **Type Safety** - Full TypeScript implementation
 
 ## 🏗️ System Architecture
 
@@ -32,17 +31,17 @@ Frontend (Angular)  ←→  Backend (Express)  ←→  Database (MongoDB)
 
 ```
 3813ICT_week9/
-├── App/                    # Task 2 - MongoDB CRUD Operations
+├── App/                    # MongoDB CRUD Operations
 │   ├── app.js             # Database connection utilities
 │   ├── create.js          # Database initialization
 │   ├── add.js             # Add products (+ API functions)
 │   ├── read.js            # Read products (+ API functions)
 │   ├── update.js          # Update products (+ API functions)
 │   └── remove.js          # Delete products (+ API functions)
-├── server/                 # Task 3 - Express REST API
+├── server/                 # Express REST API
 │   ├── server.js          # Main Express server
 │   └── package.json       # Server dependencies
-├── frontend/               # Task 4 - Angular Frontend
+├── frontend/               # Angular Frontend
 │   ├── src/app/components/ # UI Components (Products, Add, Update)
 │   ├── src/app/services/   # HTTP API services
 │   ├── src/app/models/     # TypeScript interfaces
@@ -54,7 +53,7 @@ Frontend (Angular)  ←→  Backend (Express)  ←→  Database (MongoDB)
 
 ---
 
-## 🚀 Quick Start Guide
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -64,11 +63,12 @@ Before running the application, ensure you have:
 2. **MongoDB** installed and running on port 27017
 3. **Angular CLI** - Install with: `npm install -g @angular/cli`
 
-### Step 1: Install Dependencies
+### Step 1: Clone and Install
 
 ```bash
-# Navigate to project root
-cd 3813ICT_week9
+# Clone the repository
+git clone https://github.com/yourusername/product-management-system.git
+cd product-management-system
 
 # Install root MongoDB dependencies
 npm install
@@ -99,14 +99,16 @@ node App/add.js
 
 **You need 2 terminals running simultaneously:**
 
-#### Terminal 1 - Start Express API Server
+#### Terminal 1 - Start Backend API Server
 
 ```bash
 cd server
-nodemon server.js
+npm start
+# or for development with auto-restart:
+# nodemon server.js
 ```
 
-#### Terminal 2 - Start Angular Frontend
+#### Terminal 2 - Start Frontend Application
 
 ```bash
 cd frontend
