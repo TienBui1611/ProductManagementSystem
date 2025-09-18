@@ -67,7 +67,7 @@ Before running the application, ensure you have:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ProductManagementSystem.git
+git clone <repo-url>
 cd ProductManagementSystem
 
 # Install root MongoDB dependencies
